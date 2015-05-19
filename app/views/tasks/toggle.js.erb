@@ -1,0 +1,9 @@
+<% if @task.closed? %>
+  $('#task-<%= @task.id%>').addClass('completed');
+  $('#task-<%= @task.id%> .toggle').prop('checked', true);
+<% else %>
+  $('#task-<%= @task.id%>').removeClass('completed');
+  $('#task-<%= @task.id%> .toggle').prop('checked', false);
+<% end %>
+
+$('#todo-count strong').text('<%= @open_tasks %>');

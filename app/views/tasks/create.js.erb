@@ -1,0 +1,3 @@
+$('#todo-list').append('<%= escape_javascript(render partial: 'task', locals: {task: @task}) %>');
+$('#task_what').val('');
+$('#todo-count strong').text('<%= @open_tasks %>');

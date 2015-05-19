@@ -1,0 +1,9 @@
+<li id="task-<%= task.id %>" class="<%= 'completed' if task.closed? %>">
+  <%= link_to toggle_task_path(task), remote: true, method: :put do %>
+    <input class="toggle" type="checkbox" <%= 'checked' if task.closed? %>>
+  <% end %>
+  <label data-ember-action="449"><%= task.what %></label>
+  <%= link_to task, remote: true, method: :delete do %>
+    <button class="destroy"></button>
+  <% end %>
+</li>

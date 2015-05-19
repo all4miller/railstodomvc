@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy, :toggle]
-  before_filter :load_open_tasks, except: [:show, :new, :edit]
+  before_action :load_open_tasks, except: [:show, :new, :edit]
 
   def index
     @tasks = Task.all

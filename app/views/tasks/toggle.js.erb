@@ -6,4 +6,4 @@
   $('#task-<%= @task.id%> .toggle').prop('checked', false);
 <% end %>
 
-$('#todo-count strong').text('<%= @open_tasks %>');
+$('#todo-count strong').text("<%= pluralize(@open_tasks, 'item') %>");

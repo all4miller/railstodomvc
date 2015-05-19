@@ -1,3 +1,3 @@
 $('#task-<%= @task.id%>').remove();
 $('#todo-count').val('<%= @open_tasks %>');
-$('#todo-count strong').text('<%= @open_tasks %>');
+$('#todo-count strong').text("<%= pluralize(@open_tasks, 'item') %>");

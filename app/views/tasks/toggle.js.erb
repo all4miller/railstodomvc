@@ -1,8 +1,8 @@
 <% if @task.closed? %>
-  $('#task-<%= @task.id%>').addClass('completed');
+  $('#task-<%= @task.id%>').addClass('completed').removeClass('active');
   $('#task-<%= @task.id%> .toggle').prop('checked', true);
 <% else %>
-  $('#task-<%= @task.id%>').removeClass('completed');
+  $('#task-<%= @task.id%>').removeClass('completed').addClass('active');
   $('#task-<%= @task.id%> .toggle').prop('checked', false);
 <% end %>
 

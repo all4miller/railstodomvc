@@ -1,4 +1,4 @@
-<li id="task-<%= task.id %>" class="<%= 'completed' if task.closed? %>">
+<li id="task-<%= task.id %>" class="all <%= task.closed? ? 'completed' : 'active' %>">
   <%= link_to toggle_task_path(task), remote: true, method: :put do %>
     <input class="toggle" type="checkbox" <%= 'checked' if task.closed? %>>
   <% end %>

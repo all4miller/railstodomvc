@@ -1,3 +1,5 @@
 $(document).on 'ready page:load', ->
   $('#filters a').click ->
-    console.log this.data('fiter')
+    $('#filters a').removeClass('selected').filter(this).addClass('selected');;
+    $('#todo-list li').show().filter(":not(.#{$(this).attr('data-filter')})").hide()
+    
